@@ -25,7 +25,7 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <div
-      className={`glass-effect rounded-xl p-6 group hover:glow-effect transition-all duration-300 animate-fade-in-up cursor-pointer transform hover:scale-105`}
+      className={`glass-effect rounded-xl p-6 group hover:glow-effect transition-all duration-300 animate-fade-in-up cursor-pointer card-hover-effect`}
       style={{ animationDelay: `${index * 200}ms` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -91,10 +91,10 @@ const Projects = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4 animate-fade-in-up">
             Featured Projects
           </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             A showcase of my most impactful work, demonstrating expertise in 
             full-stack development, system architecture, and modern technologies.
           </p>
@@ -113,7 +113,7 @@ const Projects = () => {
         </div>
         
         <div className="mt-20 text-center">
-          <div className="glass-effect rounded-xl p-8 max-w-4xl mx-auto">
+          <div className="glass-effect rounded-xl p-8 max-w-4xl mx-auto card-hover-effect animate-fade-in-up" style={{ animationDelay: '600ms' }}>
             <h3 className="text-2xl font-bold gradient-text mb-4">
               Ready to collaborate?
             </h3>

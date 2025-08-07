@@ -26,7 +26,7 @@ const SkillBar = ({ skill, delay = 0 }) => {
 
 const SkillCategory = ({ title, skills, delay = 0 }) => {
   return (
-    <div className="glass-effect p-6 rounded-xl animate-fade-in-up" style={{ animationDelay: `${delay}ms` }}>
+    <div className="glass-effect p-6 rounded-xl animate-fade-in-up card-hover-effect" style={{ animationDelay: `${delay}ms` }}>
       <h3 className="text-xl font-bold gradient-text mb-6 text-center">
         {title}
       </h3>
@@ -65,10 +65,10 @@ const Skills = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4 animate-fade-in-up">
             Technical Skills
           </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             Proficient in multiple programming languages and technologies, 
             with deep expertise in full-stack development and system architecture.
           </p>
@@ -102,7 +102,7 @@ const Skills = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center space-x-4 glass-effect px-6 py-4 rounded-xl">
+          <div className="inline-flex items-center space-x-4 glass-effect px-6 py-4 rounded-xl card-hover-effect animate-fade-in-up" style={{ animationDelay: '800ms' }}>
             <div className="text-center">
               <div className="text-2xl font-bold gradient-text">1+</div>
               <div className="text-slate-500 dark:text-slate-400 text-sm">Years Experience</div>

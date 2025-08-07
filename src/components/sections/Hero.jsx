@@ -45,8 +45,10 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-50 dark:bg-slate-950">
       {/* Animated background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-500/20 dark:bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-500/20 dark:bg-primary-500/10 rounded-full blur-3xl animate-pulse-slow floating-element"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-500/20 dark:bg-accent-500/10 rounded-full blur-3xl animate-pulse-slow floating-element-delayed" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 right-1/6 w-32 h-32 bg-primary-400/15 dark:bg-primary-400/8 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute bottom-1/3 left-1/6 w-48 h-48 bg-accent-400/15 dark:bg-accent-400/8 rounded-full blur-2xl animate-float-delayed"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -72,25 +74,25 @@ const Hero = () => {
           </p>
           
           <div className="flex justify-center space-x-8 mb-16">
-            {techIcons.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center group cursor-pointer">
-                <div className="p-4 glass-effect rounded-lg group-hover:glow-effect transition-all duration-300 group-hover:scale-110">
-                  <Icon size={32} className="text-primary-400" />
+            {techIcons.map(({ icon: Icon, label }, index) => (
+              <div key={label} className="flex flex-col items-center group cursor-pointer animate-fade-in-up" style={{ animationDelay: `${index * 200}ms` }}>
+                <div className="p-4 glass-effect rounded-lg group-hover:glow-effect transition-all duration-300 group-hover:scale-110 card-hover-effect animate-bounce-subtle">
+                  <Icon size={32} className="text-primary-400 group-hover:animate-glow-pulse" />
                 </div>
-                <span className="text-slate-500 dark:text-slate-400 text-sm mt-2 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
+                <span className="text-slate-500 dark:text-slate-400 text-sm mt-2 group-hover:text-slate-900 dark:group-hover:text-white transition-all duration-300 transform group-hover:scale-105">
                   {label}
                 </span>
               </div>
             ))}
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg hover:from-primary-700 hover:to-primary-600 transform hover:scale-105 transition-all duration-200 shadow-lg shadow-primary-500/25">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+            <button className="px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg hover:from-primary-700 hover:to-primary-600 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 hover:shadow-xl button-enhanced">
               View My Work
             </button>
             <button 
               onClick={handleDownloadResume}
-              className="px-8 py-3 glass-effect text-primary-400 font-semibold rounded-lg hover:glow-effect transform hover:scale-105 transition-all duration-200"
+              className="px-8 py-3 glass-effect text-primary-400 font-semibold rounded-lg hover:glow-effect transform hover:scale-105 transition-all duration-300 card-hover-effect"
             >
               Download Resume
             </button>

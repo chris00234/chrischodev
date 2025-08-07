@@ -30,6 +30,40 @@
   .glass-effect {
     @apply bg-white/70 backdrop-blur-sm border border-slate-200/50;
     @apply dark:bg-slate-900/50 dark:border-slate-700/50;
+    @apply shadow-xl shadow-slate-200/20 dark:shadow-slate-900/30;
+    @apply transition-all duration-300;
+  }
+
+  .glass-effect:hover {
+    @apply shadow-2xl shadow-slate-300/30 dark:shadow-slate-800/40;
+    @apply transform translate-y-[-2px];
+  }
+
+  .card-hover-effect {
+    @apply transition-all duration-300 ease-out;
+    @apply hover:scale-105 hover:shadow-2xl;
+    @apply hover:shadow-primary-500/10 dark:hover:shadow-primary-400/20;
+  }
+
+  .floating-element {
+    @apply animate-float;
+  }
+
+  .floating-element-delayed {
+    @apply animate-float-delayed;
+  }
+
+  .glow-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  }
+
+  .button-enhanced {
+    @apply relative overflow-hidden;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r;
+    @apply before:from-primary-600 before:to-primary-400;
+    @apply before:opacity-0 before:transition-opacity before:duration-300;
+    @apply hover:before:opacity-20;
   }
 
   .line-clamp-2 {
