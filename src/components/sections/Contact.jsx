@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Mail, MessageSquare, Send, MapPin, Phone, Calendar } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 import { CONTACT_INFO } from '../../constants/data'
 
 const Contact = () => {
@@ -12,16 +13,46 @@ const Contact = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Add your form submission logic here
-    setTimeout(() => {
-      setIsSubmitting(false)
-      // Reset form or show success message
-      alert('Message sent! I\'ll get back to you soon.')
+    
+    try {
+      // EmailJS configuration - using your actual credentials
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_u9da8wn'
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_uxhd2k4'
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'FmldDTCNuI0il36l6'
+      
+      // Check if credentials are available
+      if (!serviceID || !templateID || !publicKey) {
+        throw new Error('EmailJS configuration is missing')
+      }
+      
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        to_email: 'wheogus98@gmail.com',
+        subject: formData.subject,
+        message: formData.message,
+        reply_to: formData.email,
+        to_name: 'Chris'
+      }
+
+      console.log('Sending email with params:', templateParams)
+
+      // Send email using EmailJS
+      const response = await emailjs.send(serviceID, templateID, templateParams, publicKey)
+      
+      console.log('Email sent successfully:', response)
+      alert('Message sent successfully! I\'ll get back to you soon.')
       setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 2000)
+    } catch (error) {
+      console.error('Error sending email:', error)
+      alert(`Sorry, there was an error sending your message: ${error.message || error.text || 'Unknown error'}. Please try again or email me directly at wheogus98@gmail.com.`)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e) => {

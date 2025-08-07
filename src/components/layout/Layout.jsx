@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import FloatingDots from '../ui/FloatingDots'
+import ScrollToTop from '../ui/ScrollToTop'
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }
