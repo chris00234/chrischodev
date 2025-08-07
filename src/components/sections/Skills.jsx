@@ -7,11 +7,11 @@ const SkillBar = ({ skill, delay = 0 }) => {
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center space-x-2">
           <span className="text-2xl">{skill.icon}</span>
-          <span className="text-white font-medium">{skill.name}</span>
+          <span className="text-slate-900 dark:text-white font-medium">{skill.name}</span>
         </div>
         <span className="text-primary-400 font-mono text-sm">{skill.level}%</span>
       </div>
-      <div className="w-full bg-slate-800 rounded-full h-2">
+      <div className="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2">
         <div 
           className="bg-gradient-to-r from-primary-500 to-primary-400 h-2 rounded-full transition-all duration-1000 ease-out"
           style={{ 
@@ -62,13 +62,13 @@ const Skills = () => {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             Technical Skills
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             Proficient in multiple programming languages and technologies, 
             with deep expertise in full-stack development and system architecture.
           </p>
@@ -82,7 +82,7 @@ const Skills = () => {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 activeTab === tab.key
                   ? 'bg-gradient-to-r from-primary-600 to-primary-500 text-white shadow-lg'
-                  : 'glass-effect text-slate-300 hover:text-white hover:glow-effect'
+                  : 'glass-effect text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:glow-effect'
               }`}
             >
               {tab.label}
@@ -105,17 +105,17 @@ const Skills = () => {
           <div className="inline-flex items-center space-x-4 glass-effect px-6 py-4 rounded-xl">
             <div className="text-center">
               <div className="text-2xl font-bold gradient-text">1+</div>
-              <div className="text-slate-400 text-sm">Years Experience</div>
+              <div className="text-slate-500 dark:text-slate-400 text-sm">Years Experience</div>
             </div>
-            <div className="w-px h-12 bg-slate-600"></div>
+            <div className="w-px h-12 bg-slate-300 dark:bg-slate-600"></div>
             <div className="text-center">
               <div className="text-2xl font-bold gradient-text">30+</div>
-              <div className="text-slate-400 text-sm">Projects Completed</div>
+              <div className="text-slate-500 dark:text-slate-400 text-sm">Projects Completed</div>
             </div>
-            <div className="w-px h-12 bg-slate-600"></div>
+            <div className="w-px h-12 bg-slate-300 dark:bg-slate-600"></div>
             <div className="text-center">
               <div className="text-2xl font-bold gradient-text">10+</div>
-              <div className="text-slate-400 text-sm">Technologies</div>
+              <div className="text-slate-500 dark:text-slate-400 text-sm">Technologies</div>
             </div>
           </div>
         </div>

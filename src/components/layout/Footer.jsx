@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <MapPin size={16} className="text-primary-400" />
-            <span className="text-slate-400">{CONTACT_INFO.location}</span>
+            <span className="text-slate-500 dark:text-slate-400">{CONTACT_INFO.location}</span>
           </div>
           
           <div className="flex space-x-6">
@@ -24,7 +24,7 @@ const Footer = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 hover:text-primary-400 transition-colors duration-200 hover:scale-110 transform"
+                className="text-slate-500 dark:text-slate-400 hover:text-primary-400 transition-colors duration-200 hover:scale-110 transform"
                 aria-label={label}
               >
                 <Icon size={20} />
@@ -33,8 +33,8 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-slate-700 mt-6 pt-6 text-center">
-          <p className="text-slate-400 text-sm">
+        <div className="border-t border-slate-200 dark:border-slate-700 mt-6 pt-6 text-center">
+          <p className="text-slate-500 dark:text-slate-400 text-sm">
             © 2024 Chris. Built with React, Vite & Tailwind CSS
           </p>
         </div>
