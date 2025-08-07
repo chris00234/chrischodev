@@ -1,7 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { terminalData, executeCommand } from './terminalCommands'
 
 const Terminal = () => {
+  const navigate = useNavigate()
+  
   const [history, setHistory] = useState([
     { type: 'output', content: 'Welcome to Chris\'s Terminal! 🚀' },
     { type: 'output', content: 'Type "help" to see available commands.' },
@@ -14,6 +17,10 @@ const Terminal = () => {
   
   const inputRef = useRef(null)
   const terminalRef = useRef(null)
+
+  const handleClose = () => {
+    navigate('/')
+  }
 
   useEffect(() => {
     // Focus on terminal input when component mounts
@@ -127,7 +134,11 @@ const Terminal = () => {
         {/* Terminal Header */}
         <div className="bg-gray-700 px-4 py-3 flex items-center space-x-2">
           <div className="flex space-x-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+            <button 
+              onClick={handleClose}
+              className="w-3 h-3 bg-red-500 rounded-full hover:bg-red-600 transition-colors cursor-pointer"
+              title="Close Terminal"
+            ></button>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
           </div>
