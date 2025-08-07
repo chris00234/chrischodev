@@ -7,20 +7,21 @@ export const terminalData = {
       'skills': { type: 'directory', items: {} },
       'about.txt': { 
         type: 'file', 
-        content: `Chris Cho - Full-Stack Developer
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        content: `Daehyun (Chris) Cho - Backend/Full-stack Developer
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🚀 Passionate about building scalable applications
-💻 Expertise in .NET, React, and modern technologies
-🏗️  Full-stack development from database to UI
-📍 Available for remote work and collaboration
+🎓 Computer Science Graduate from UC Irvine (GPA: 3.78)
+💼 Software Engineer at GIT America Inc (Hyundai/KIA projects)
+🚀 Specializing in Python, C# (.NET), and cloud infrastructure
+🏗️  Building scalable enterprise applications and optimizing complex systems
+📍 Irvine, CA - Available for remote work
 
-"From databases to user interfaces, I craft complete solutions that make a difference."
+"Backend/Full-stack developer who delivers high-performance solutions from database to deployment."
 
 Contact: 
-📧 Email: your@email.com
-🔗 LinkedIn: linkedin.com/in/your-profile
-🐙 GitHub: github.com/your-username` 
+📧 Email: wheogus98@gmail.com
+🔗 LinkedIn: linkedin.com/in/daehyuncho980113
+🐙 GitHub: github.com/chris00234` 
       },
       'resume.pdf': { 
         type: 'file', 
@@ -31,13 +32,14 @@ Contact:
         content: `Contact Information
 ━━━━━━━━━━━━━━━━━━━━
 
-📧 Email: your@email.com
-📱 Phone: +1 (555) 123-4567
-🌍 Location: Available for remote work
-🔗 LinkedIn: linkedin.com/in/your-profile
-🐙 GitHub: github.com/your-username
+📧 Email: wheogus98@gmail.com
+📱 Phone: 213-274-2672
+🌍 Location: Irvine, CA - Available for remote work
+🔗 LinkedIn: linkedin.com/in/daehyuncho980113
+🐙 GitHub: github.com/chris00234
 
-💡 Always open to new opportunities and interesting projects!`
+💡 Always open to new opportunities and interesting projects!
+🎯 Specializing in enterprise applications and cloud infrastructure`
       }
     }
   }
@@ -45,128 +47,182 @@ Contact:
 
 // Initialize projects data
 terminalData['/'].items.projects.items = {
-  'enterprise-api-gateway': {
+  'hyundai-kia-diagnostic': {
     type: 'file',
-    content: `Enterprise API Gateway
-━━━━━━━━━━━━━━━━━━━━━
+    content: `Hyundai/KIA Diagnostic Application
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🚀 High-performance API gateway handling 10k+ requests/second
-🛠️  Tech Stack: C#, .NET 8.0, Redis, Docker
+🚗 Enhanced server-side components for automotive diagnostic applications
+🛠️  Tech Stack: C#, .NET Framework, MS SQL, AWS S3
 ⭐ Features:
-   • Microservices Architecture
-   • Real-time Monitoring
-   • Auto-scaling
-   • Advanced caching
-   • Rate limiting
+   • API Integration
+   • High-throughput Batch Processing
+   • Cloud Migration to AWS
+   • Database Optimization
+   • Cross-functional Collaboration
 
-📈 Performance: 10,000+ req/sec
+🏢 Company: GIT America Inc
 🔧 Status: Production ✅`
   },
-  'analytics-dashboard': {
+  'ct-image-processing': {
     type: 'file',
-    content: `Real-time Analytics Dashboard
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    content: `CT Image Processing Pipeline
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📊 Full-stack analytics platform with real-time data processing
-🛠️  Tech Stack: Python, React, PostgreSQL, WebSockets
+🧠 Medical imaging optimization with bilateral filter parameter tuning
+🛠️  Tech Stack: Python, OpenCV, SciPy, HPC
 ⭐ Features:
-   • Real-time Updates
-   • Custom Charts
-   • Data Export
-   • Interactive visualizations
-   • WebSocket connections
+   • Grid Search & Particle Swarm Optimization
+   • Global Minima Achievement
+   • Multi-GPU Computing
+   • SSH-accessible Clusters
+   • Distributed Memory Allocation
 
-📈 Status: Active Development 🚧`
-  },
-  'task-scheduler': {
-    type: 'file',
-    content: `Distributed Task Scheduler
-━━━━━━━━━━━━━━━━━━━━━━━━━
-
-⚡ Scalable task scheduling system for high-performance computing
-🛠️  Tech Stack: C++, Docker, Kubernetes
-⭐ Features:
-   • Load Balancing
-   • Fault Tolerance
-   • Performance Monitoring
-   • Distributed architecture
-   • High throughput
-
+🏫 Institution: UC Irvine Medical Imaging Lab
 🔧 Status: Completed ✅`
   },
-  'portfolio-website': {
+  'unet-heart-segmentation': {
     type: 'file',
-    content: `Portfolio Website
-━━━━━━━━━━━━━━━━
+    content: `U-Net Heart Chamber Segmentation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🌐 Modern portfolio website with interactive terminal
-🛠️  Tech Stack: React, Vite, Tailwind CSS
+❤️ Deep learning model for precise heart chamber segmentation
+🛠️  Tech Stack: PyTorch, Python, SSH, Multi-GPU
 ⭐ Features:
-   • Dark/Light theme toggle
-   • Interactive terminal (you're using it!)
-   • Responsive design
-   • Smooth animations
-   • Performance optimized
+   • 20% Overfitting Reduction
+   • Hyperparameter Tuning
+   • Distributed Training
+   • U-Net Architecture
+   • Medical Image Analysis
 
-🔗 Live: You're looking at it! 🎉
-📂 GitHub: Check the source code
+🏫 Institution: UC Irvine Medical Imaging Lab
+🔧 Status: Completed ✅`
+  },
+  'image-blender': {
+    type: 'file',
+    content: `Image Blender with Pyramids
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Status: Active Development 🚧`
+🎨 High-fidelity image reconstruction using advanced algorithms
+🛠️  Tech Stack: Python, OpenCV, SciPy, NumPy
+⭐ Features:
+   • SciPy Least-squares Solver
+   • Gaussian & Laplacian Pyramids
+   • Sparse Matrix Optimization
+   • Memory Footprint Reduction
+   • Seamless Image Blending
+
+🎯 Academic Project
+🔧 Status: Completed ✅`
+  },
+  'ai-engagement-scoring': {
+    type: 'file',
+    content: `AI-Powered Engagement Scoring System
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🤖 Real-time engagement scoring replacing traditional survey methods
+🛠️  Tech Stack: Python, Machine Learning, Computer Vision
+⭐ Features:
+   • Custom Dataset Creation
+   • Live Model Deployment
+   • Real-time Scoring Function
+   • Entrepreneur Showcases
+   • Team Leadership
+
+🏆 Achievement: AI Innovation Challenge Finalist
+🔧 Status: Award Winner ✨`
+  },
+  'cloud-removal-diffusion': {
+    type: 'file',
+    content: `Cloud Removal with Diffusion Models
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+☁️ Cloud-removal pipeline for living-space detection analysis
+🛠️  Tech Stack: PyTorch, Diffusion Models, SAM, Computer Vision
+⭐ Features:
+   • Segment Anything Model Integration
+   • Diffusion-based Inpainting
+   • IoU Threshold Tuning
+   • Binary Cloud Masks
+   • Enhanced Image Clarity
+
+🎯 Research Project
+🔧 Status: Completed ✅`
   }
 }
 
 // Initialize skills data
 terminalData['/'].items.skills.items = {
-  'backend.txt': {
+  'languages.txt': {
     type: 'file',
-    content: `Backend Technologies
-━━━━━━━━━━━━━━━━━━━
+    content: `Programming Languages
+━━━━━━━━━━━━━━━━━━━━━
 
-🔧 Languages & Frameworks:
-   • C# / .NET 8.0        ████████████ 95%
-   • ASP.NET Core         ███████████  90%
-   • Node.js              ████████     80%
-   • Python               ███████      70%
-
-🏗️  Architecture & Patterns:
-   • Microservices
-   • Clean Architecture
-   • CQRS & Event Sourcing
-   • Domain-Driven Design`
+💻 Core Languages:
+   • C#                   █████████    90%
+   • Python               █████████    90%
+   • C/C++                ████████     85%
+   • Java                 ████████     80%
+   • JavaScript           ███████       75%
+   • TypeScript           ███████       70%
+   • SQL                  ████████     80%
+   • Bash/Shell           ███████       75%
+   • Julia                ██████         60%`
   },
-  'frontend.txt': {
+  'frameworks.txt': {
     type: 'file',
-    content: `Frontend Technologies
-━━━━━━━━━━━━━━━━━━━━
+    content: `Frameworks & Libraries
+━━━━━━━━━━━━━━━━━━━━━━
 
-⚛️  JavaScript & Frameworks:
-   • React               ███████████  90%
-   • TypeScript          ██████████   85%
-   • Next.js             ████████     80%
-   • Vue.js              ███████      70%
+⚡ Backend Frameworks:
+   • .NET Framework       █████████    90%
+   • .NET 8.0             ████████     85%
+   • Spring Boot          ███████       75%
 
-🎨 Styling & UI:
-   • Tailwind CSS
-   • CSS-in-JS
-   • Material-UI
-   • Responsive Design`
+🧠 AI/ML Frameworks:
+   • TensorFlow           ████████     80%
+   • PyTorch              ███████       75%
+
+⚛️ Frontend Frameworks:
+   • React                ███████       70%
+   • Node.js              ██████        65%`
   },
-  'database.txt': {
+  'databases.txt': {
     type: 'file',
     content: `Database Technologies
-━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━
 
-🗃️  Databases:
-   • SQL Server          ███████████  90%
-   • PostgreSQL          ██████████   85%
-   • MongoDB             ████████     80%
-   • Redis               ███████      75%
+🗄️ Databases:
+   • MS SQL               ████████     85%
+   • MySQL                ████████     80%
+   • SQLite               ███████       75%
+   • PostgreSQL           ███████       70%
+   • Redis                ████████     80%
+   • MongoDB              ███████       70%
 
-📊 Data Management:
-   • Entity Framework Core
-   • Dapper
+📊 Database Skills:
+   • Query Optimization
    • Database Design
-   • Performance Optimization`
+   • Performance Tuning
+   • Data Migration`
+  },
+  'cloud-devops.txt': {
+    type: 'file',
+    content: `Cloud & DevOps
+━━━━━━━━━━━━━━━
+
+☁️ Cloud Platforms:
+   • AWS                  ████████     80%
+   • GCP                  ███████       70%
+
+🚪️ DevOps Tools:
+   • Docker               ███████       75%
+   • Jenkins              ███████       70%
+   • HPC                  ███████       75%
+
+📋 Version Control:
+   • Git                  █████████    90%
+   • SVN                  █████          50%`
   }
 }
 
@@ -308,10 +364,11 @@ const commands = {
   whoami: () => ({
     output: `chris
      
-👨‍💻 Full-Stack Developer
-🎯 Specializing in .NET and React
-🏗️  Building scalable applications
-🌍 Available for remote work`
+👨‍💻 Backend/Full-stack Developer
+🎯 Specializing in Python, C# (.NET), and cloud infrastructure
+🏗️  Building scalable enterprise applications
+🌍 Irvine, CA - Available for remote work
+🎓 UC Irvine Computer Science Graduate`
   }),
 
   about: () => ({
@@ -323,9 +380,10 @@ const commands = {
 ━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Use these commands to explore:
-   cat skills/backend.txt    - Backend technologies
-   cat skills/frontend.txt   - Frontend technologies  
-   cat skills/database.txt   - Database technologies
+   cat skills/languages.txt     - Programming languages
+   cat skills/frameworks.txt    - Frameworks & libraries
+   cat skills/databases.txt     - Database technologies
+   cat skills/cloud-devops.txt  - Cloud & DevOps tools
 
 Or navigate: cd skills && ls`
   }),
@@ -335,10 +393,12 @@ Or navigate: cd skills && ls`
 ━━━━━━━━━━━━━━━━━━
 
 Use these commands to explore:
-   cat projects/enterprise-api-gateway
-   cat projects/analytics-dashboard
-   cat projects/task-scheduler
-   cat projects/portfolio-website
+   cat projects/hyundai-kia-diagnostic
+   cat projects/ct-image-processing
+   cat projects/unet-heart-segmentation
+   cat projects/image-blender
+   cat projects/ai-engagement-scoring
+   cat projects/cloud-removal-diffusion
 
 Or navigate: cd projects && ls`
   }),

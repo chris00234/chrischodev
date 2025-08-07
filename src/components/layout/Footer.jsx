@@ -35,7 +35,7 @@ const Footer = () => {
         
         <div className="border-t border-slate-200 dark:border-slate-700 mt-6 pt-6 text-center">
           <p className="text-slate-500 dark:text-slate-400 text-sm">
-            © 2024 Chris. Built with React, Vite & Tailwind CSS
+            © { new Date().getFullYear() } Chris. Built with React, Vite & Tailwind CSS
           </p>
         </div>
       </div>

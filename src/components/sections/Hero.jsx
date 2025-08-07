@@ -4,7 +4,7 @@ import { ChevronDown, Code, Database, Server } from 'lucide-react'
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0)
   const [isChevronVisible, setIsChevronVisible] = useState(true)
-  const roles = ['Full-Stack Developer', '.NET Developer', 'Database Engineer', 'System Designer']
+  const roles = ['Full-Stack Developer', 'Backend Developer', 'Database Engineer', 'System Designer']
 
   const handleDownloadResume = () => {
     const link = document.createElement('a')
@@ -13,6 +13,13 @@ const Hero = () => {
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
+  }
+
+  const handleViewWork = () => {
+    const projectsSection = document.getElementById('projects')
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
   
   useEffect(() => {
@@ -67,10 +74,14 @@ const Hero = () => {
           </div>
           
           <p className="text-xl text-slate-500 dark:text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Passionate about building scalable, high-performance applications with{' '}
-            <span className="text-primary-400 font-semibold">C#</span>,{' '}
-            <span className="text-primary-400 font-semibold">.NET 8.0</span>, and modern technologies. 
-            From databases to user interfaces, I craft complete solutions that make a difference.
+            Backend/Full-stack developer specializing in{' '}
+            <span className="text-primary-400 font-semibold">Python</span>,{' '}
+            <span className="text-primary-400 font-semibold">C# (.NET)</span>, and{' '}
+            <span className="text-primary-400 font-semibold">cloud infrastructure</span>.{' '}
+            I architect and build scalable enterprise applications, optimize complex systems, and deliver 
+            high-performance solutions that span from{' '}
+            <span className="text-accent-400 font-semibold">database</span> to{' '}
+            <span className="text-accent-400 font-semibold">deployment</span>.
           </p>
           
           <div className="flex justify-center space-x-8 mb-16">
@@ -87,7 +98,10 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-            <button className="px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg hover:from-primary-700 hover:to-primary-600 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 hover:shadow-xl button-enhanced">
+            <button 
+              onClick={handleViewWork}
+              className="px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg hover:from-primary-700 hover:to-primary-600 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 hover:shadow-xl button-enhanced"
+            >
               View My Work
             </button>
             <button 

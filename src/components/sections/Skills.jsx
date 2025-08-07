@@ -45,10 +45,10 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState('all')
   
   const categories = [
-    { key: 'backend', title: 'Backend', skills: SKILLS.backend },
-    { key: 'database', title: 'Database', skills: SKILLS.database },
-    { key: 'frontend', title: 'Frontend', skills: SKILLS.frontend },
-    { key: 'tools', title: 'Tools & DevOps', skills: SKILLS.tools },
+    { key: 'languages', title: 'Languages', skills: SKILLS.languages },
+    { key: 'frameworks', title: 'Frameworks & Libraries', skills: SKILLS.frameworks },
+    { key: 'database', title: 'Databases', skills: SKILLS.database },
+    { key: 'cloud', title: 'Cloud & DevOps', skills: SKILLS.cloud },
   ]
 
   const tabs = [

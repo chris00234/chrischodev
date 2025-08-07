@@ -72,7 +72,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
       </div>
       
-      <div className="flex space-x-3">
+      {/* <div className="flex space-x-3">
         <button className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-500 text-white text-sm rounded-lg hover:from-primary-700 hover:to-primary-600 transition-all duration-200 transform hover:scale-105">
           <ExternalLink size={14} />
           <span>Live Demo</span>
@@ -81,12 +81,35 @@ const ProjectCard = ({ project, index }) => {
           <Github size={14} />
           <span>Code</span>
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }
 
 const Projects = () => {
+  const handleGetInTouch = () => {
+    const contactSection = document.getElementById('contact')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const handleScheduleCall = () => {
+    const contactSection = document.getElementById('contact')
+    const nameInput = document.getElementById('name')
+    
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+    
+    // Focus on full name input after scroll completes
+    setTimeout(() => {
+      if (nameInput) {
+        nameInput.focus()
+      }
+    }, 500)
+  }
+
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
       <div className="max-w-7xl mx-auto">
@@ -122,10 +145,16 @@ const Projects = () => {
               Let's build something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg hover:from-primary-700 hover:to-primary-600 transform hover:scale-105 transition-all duration-200">
+              <button 
+                onClick={handleGetInTouch}
+                className="px-6 py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg hover:from-primary-700 hover:to-primary-600 transform hover:scale-105 transition-all duration-200"
+              >
                 Get In Touch
               </button>
-              <button className="px-6 py-3 glass-effect text-primary-500 dark:text-primary-400 font-semibold rounded-lg hover:glow-effect transform hover:scale-105 transition-all duration-200">
+              <button 
+                onClick={handleScheduleCall}
+                className="px-6 py-3 glass-effect text-primary-500 dark:text-primary-400 font-semibold rounded-lg hover:glow-effect transform hover:scale-105 transition-all duration-200"
+              >
                 Schedule a Call
               </button>
             </div>
